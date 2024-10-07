@@ -69,14 +69,15 @@ public class MainLayout extends AppLayout {
     private SideNav createNavigation() {
         SideNav nav = new SideNav();
 
-        if (accessChecker.hasAccess(InventoryView.class)) {
-            nav.addItem(new SideNavItem("Inventory", InventoryView.class, LineAwesomeIcon.COLUMNS_SOLID.create()));
-        }
-
         if (accessChecker.hasAccess(InventoryGridView.class)) {
             nav.addItem(
                     new SideNavItem("Inventory Listing", InventoryGridView.class,
                             LineAwesomeIcon.COLUMNS_SOLID.create()));
+        }
+
+        if (accessChecker.hasAccess(InventoryView.class)) {
+            nav.addItem(new SideNavItem("Inventory Manager", InventoryView.class,
+                    LineAwesomeIcon.COLUMNS_SOLID.create()));
         }
 
         return nav;

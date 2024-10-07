@@ -35,12 +35,12 @@ import pt.archkode.inventory.services.SampleInventoryService;
 import pt.archkode.inventory.views.MainLayout;
 
 @PageTitle("Inventory Manager")
-@Route(value = "/:sampleInventoryID?/:action?(edit)", layout = MainLayout.class)
+@Route(value = "inventory-manager/:sampleInventoryID?/:action?(edit)", layout = MainLayout.class)
 @RolesAllowed({ "USER", "ADMIN" })
 public class InventoryView extends Div implements BeforeEnterObserver {
 
     private final String SAMPLEINVENTORY_ID = "sampleInventoryID";
-    private final String SAMPLEINVENTORY_EDIT_ROUTE_TEMPLATE = "/%s/edit";
+    private final String SAMPLEINVENTORY_EDIT_ROUTE_TEMPLATE = "inventory-manager/%s/edit";
 
     private final Grid<SampleInventory> grid = new Grid<>(SampleInventory.class, false);
 

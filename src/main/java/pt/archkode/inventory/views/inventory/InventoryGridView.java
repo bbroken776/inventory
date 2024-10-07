@@ -34,8 +34,8 @@ import pt.archkode.inventory.data.SampleInventory;
 import pt.archkode.inventory.services.SampleInventoryService;
 import pt.archkode.inventory.views.MainLayout;
 
-@PageTitle("Grid with Filters")
-@Route(value = "grid-with-filters", layout = MainLayout.class)
+@PageTitle("Inventory Listing")
+@Route(value = "", layout = MainLayout.class)
 @PermitAll
 @Uses(Icon.class)
 public class InventoryGridView extends Div {
